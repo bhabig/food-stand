@@ -1,6 +1,6 @@
 class FoodTruck
 
-  attr_accessor :name, :hours, :foodies, :orders
+  attr_accessor :name, :hours
 
   @@all = []
 
@@ -10,7 +10,7 @@ class FoodTruck
     self.add_to_menu(items) if items
     @hours = hours
     @orders = []
-    @@all << self
+    @@all << self if @@all.include?(self)
   end
 
   def self.all
@@ -26,8 +26,11 @@ class FoodTruck
     self.items
   end
 
+  def orders
+    #display orders in string readable form
+  end
+
   def foodies
-    binding.pry
     #use orders to access and display foodies
   end
 

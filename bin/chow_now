@@ -1,6 +1,9 @@
 require_relative '../config/environment'
 
 FoodTruck.new("Fred's Fried Food", "Sun-Sat 10AM - 11PM")
+FoodTruck.new("Bob's Burger Barn", "Mon-Sat 10:30AM - 12AM")
+FoodTruck.new("Jane's Juice and Brew", "Sun-Sat 10AM - 1AM")
+FoodTruck.new("Christina's Tacos", "Sun-Sat 11AM - 1AM")
 
 puts "Welcome to #{FoodTruck.all[rand(0..FoodTruck.all.length-1)].name}!\n"
 
@@ -10,7 +13,11 @@ name = gets.strip
 foodie = Foodie.new(name)
 
 puts "Hey, #{foodie.name.capitalize}!\n"
-puts "enter 'order' if you want to choose items from our menu to order! \n OR \nenter 'past orders' if you want to see what you've already gotten from here \n OR \nenter 'balance' to check your bank account balance"
+puts "enter 'order' if you want to choose items from our menu to order! \n
+ OR \n
+ enter 'past orders' if you want to see what you've already gotten from here \n
+  OR \n
+  enter 'balance' to check your bank account balance"
 
 input = gets.strip
 

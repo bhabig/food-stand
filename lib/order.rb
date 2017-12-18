@@ -15,7 +15,7 @@ class Order
     @@all
   end
 
-  def add_items(items)
-
+  def self.start_the_order(item, foodie, food_truck)
+    # add foodie to food_truck and food_truck to foodie
   end
 end

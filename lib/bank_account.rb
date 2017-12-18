@@ -2,9 +2,9 @@ class BankAccount
   attr_accessor :owner, :balance
 
   @@all = []
-  
-  def initialize(owner, balance=0)
+
+  def initialize(owner)
     @owner = owner
-    @balance = balance
+    @balance = rand(10..100)
   end
 end

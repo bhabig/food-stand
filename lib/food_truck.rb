@@ -10,6 +10,11 @@ class FoodTruck
     @hours = hours
     @foodies = []
     @orders = []
+    @@all << self
+  end
+
+  def self.all
+    @@all
   end
 
   def add_items(items)

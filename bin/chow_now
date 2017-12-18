@@ -1,1 +1,26 @@
 require_relative '../config/environment'
+
+FoodTruck.new("Fred's Fried Food", "Sun-Sat 10AM - 11PM")
+
+puts "Welcome to #{FoodTruck.all[rand(0..FoodTruck.all.length-1)].name}!\n"
+
+puts "What's your name?"
+name = gets.strip
+
+foodie = Foodie.new(name)
+
+puts "Hey, #{foodie.name.capitalize}!\n"
+puts "enter 'order' if you want to choose items from our menu to order! \n OR \nenter 'past orders' if you want to see what you've already gotten from here \n OR \nenter 'balance' to check your bank account balance"
+
+input = gets.strip
+
+case input
+when "order"
+  puts "here are the items:"
+when "past orders"
+  puts "here are the things you've ordered before"
+when "balance"
+  puts "$#{foodie.bank_account.balance}"
+else
+  puts "try again"
+end

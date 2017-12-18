@@ -8,6 +8,11 @@ class Order
     @foodie = foodie
     @items = []
     @items.add_items(items) if items
+    @@all << self
+  end
+
+  def self.all
+    @@all
   end
 
   def add_items(items)

@@ -9,5 +9,10 @@ class Foodie
     @orders = []
     @items = []
     @food_trucks = []
+    @@all << self
+  end
+
+  def self.all
+    @@all
   end
 end
